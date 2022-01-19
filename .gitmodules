@@ -1,0 +1,24 @@
+[submodule "libs/github.com/cncf/xds"]
+	path = libs/github.com/cncf/xds
+	url = git@github.com:cncf/xds.git
+[submodule "libs/github.com/cncf/udpa"]
+	path = libs/github.com/cncf/udpa
+	url = git@github.com:cncf/udpa.git
+[submodule "libs/github.com/envoyproxy/envoy"]
+	path = libs/github.com/envoyproxy/envoy
+	url = git@github.com:envoyproxy/envoy.git
+[submodule "libs/github.com/envoyproxy/protoc-gen-validate"]
+	path = libs/github.com/envoyproxy/protoc-gen-validate
+	url = git@github.com:envoyproxy/protoc-gen-validate.git
+[submodule "libs/github.com/googleapis/googleapis"]
+	path = libs/github.com/googleapis/googleapis
+	url = git@github.com:googleapis/googleapis.git
+[submodule "libs/github.com/census-instrumentation/opencensus-proto"]
+	path = libs/github.com/census-instrumentation/opencensus-proto
+	url = git@github.com:census-instrumentation/opencensus-proto.git
+[submodule "libs/github.com/open-telemetry/opentelemetry-proto"]
+	path = libs/github.com/open-telemetry/opentelemetry-proto
+	url = git@github.com:open-telemetry/opentelemetry-proto.git
+[submodule "libs/github.com/prometheus/client_model"]
+	path = libs/github.com/prometheus/client_model
+	url = git@github.com:prometheus/client_model.git
