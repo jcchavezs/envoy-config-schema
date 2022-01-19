@@ -9,7 +9,7 @@ on:
   pull_request:
 
 jobs:
-  test:
+  generate:
     runs-on: ubuntu-20.04
     steps:
       - name: Install Protoc

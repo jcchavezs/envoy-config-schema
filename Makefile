@@ -17,9 +17,12 @@ generate-json-schema:
 	$(MAKE) generate-json-schema-version VERSION=v2
 	$(MAKE) generate-json-schema-version VERSION=v3
 
+BUILD_DIR=./build
+BUILD_TMP_DIR=$(BUILD_DIR)/tmp
+
 generate-json-schema-version:
-	@-mkdir -p ./build/$(VERSION)
-	@protoc --jsonschema_out=./build/$(VERSION) \
+	@-rm -rf $(BUILD_TMP_DIR) && mkdir -p $(BUILD_TMP_DIR)
+	@protoc --jsonschema_out=$(BUILD_TMP_DIR) \
 		-I$(PWD)/libs/github.com/cncf/xds \
 		-I$(PWD)/libs/github.com/cncf/udpa \
 		-I$(PWD)/libs/github.com/envoyproxy/protoc-gen-validate \
@@ -29,3 +32,5 @@ generate-json-schema-version:
 		-I$(PWD)/libs/github.com/prometheus/client_model \
 		-I$(PWD)/libs/github.com/envoyproxy/envoy/api \
 		$(PWD)/libs/github.com/envoyproxy/envoy/api/envoy/config/bootstrap/$(VERSION)/bootstrap.proto
+	ls $(BUILD_TMP_DIR) | xargs -I {} mv $(BUILD_TMP_DIR)/{} $(BUILD_DIR)/$(VERSION)_{}
+	rm -rf $(BUILD_TMP_DIR)
