@@ -18,6 +18,9 @@ jobs:
         with:
           submodules: true
 
+      - name: Install Protoc
+        uses: arduino/setup-protoc@v1
+
       - name: Setup go
         uses: actions/setup-go@v1
         with:
