@@ -12,9 +12,11 @@ jobs:
   test:
     runs-on: ubuntu-20.04
     steps:
-      # Set fetch-depth: 0 to fetch commit history and tags for use in version calculation
+      - name: Install Protoc
+        uses: arduino/setup-protoc@v1
+
       - name: Check out code
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v2
         with:
           submodules: true
 
@@ -24,8 +26,7 @@ jobs:
           go-version: 1.17
 
       - name: Install dependencies
-        run: |
-          make install-deps
+        run: make install-deps
 
       - name: Generate JSON Schema
-        run: make generate-json-schema-version
+        run: make generate-json-schema
