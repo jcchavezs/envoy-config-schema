@@ -8,7 +8,10 @@ install-deps:
 	cd ./libs/github.com/open-telemetry/opentelemetry-proto && git checkout b43e9b18b76abf3ee040164b55b9c355217151f3
 	cd ./libs/github.com/prometheus/client_model && git checkout 147c58e9608a4f9628b53b6cc863325ca746f63a
 	cd ./libs/github.com/envoyproxy/envoy && git checkout a9d72603c68da3a10a1c0d021d01c7877e6f2a30
+
 	go install github.com/chrusty/protoc-gen-jsonschema/cmd/protoc-gen-jsonschema@1.3.5
+	go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.26
+	go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.1
 
 generate-json-schema:
 	$(MAKE) generate-json-schema-version VERSION=v2
