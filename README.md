@@ -1,6 +1,6 @@
-# Envoy schema
+# Envoy config schema
 
-This repository generates JSON schemas from the envoy proto configurations.
+This repository generates JSON schemas from the envoy proto configurations. This is useful to do validations on config for example on IDE or pin pointing errors in the config in the jsonschema fashion.
 
 ## Versioning
 
