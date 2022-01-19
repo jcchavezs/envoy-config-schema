@@ -7,7 +7,7 @@ install-deps:
 	cd ./libs/github.com/census-instrumentation/opencensus-proto && git checkout 4aa53e15cbf1a47bc9087e6cfdca214c1eea4e89
 	cd ./libs/github.com/open-telemetry/opentelemetry-proto && git checkout b43e9b18b76abf3ee040164b55b9c355217151f3
 	cd ./libs/github.com/prometheus/client_model && git checkout 147c58e9608a4f9628b53b6cc863325ca746f63a
-	cd ./libs/github.com/envoyproxy/envoy && git checkout a9d72603c68da3a10a1c0d021d01c7877e6f2a30
+	cd ./libs/github.com/envoyproxy/envoy && git checkout a9d72603c68da3a10a1c0d021d01c7877e6f2a30 #v1.21.0
 
 	go install github.com/chrusty/protoc-gen-jsonschema/cmd/protoc-gen-jsonschema@1.3.5
 	go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.26
