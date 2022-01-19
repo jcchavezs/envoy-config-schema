@@ -28,7 +28,7 @@ jobs:
       - name: Generate JSON Schema
         run: make generate-json-schema
 
-      - name: Release
+      - name: Release generated artifacts
         uses: softprops/action-gh-release@v1
         with:
           files: |
