@@ -27,5 +27,7 @@ jobs:
         run: |
           make install-deps
 
+      - run: ls -la $(go env GOPATH)/bin
+
       - name: Generate JSON Schema
         run: make generate-json-schema-version
