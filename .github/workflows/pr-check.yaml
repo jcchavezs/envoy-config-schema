@@ -13,15 +13,15 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Install Protoc
-        uses: arduino/setup-protoc@v1
+        uses: arduino/setup-protoc@149f6c87b92550901b26acd1632e11c3662e381f # v1.3.0
 
       - name: Check out code
-        uses: actions/checkout@v2
+        uses: actions/checkout@0717577d45739eb3c851188b29f50ed6c0b2194e # v2.8.0
         with:
           submodules: true
 
       - name: Setup go
-        uses: actions/setup-go@v1
+        uses: actions/setup-go@0caeaed6fd66a828038c2da3c0f662a42862658f # v1.1.3
         with:
           go-version: 1.17
 
